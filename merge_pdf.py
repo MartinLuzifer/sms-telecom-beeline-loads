@@ -22,6 +22,11 @@ def merge_pdf(files: list | list, destination: str):
     merger.close()
 
 
+if int(MONTH) < 10:
+    MONTH = MONTH[1]
+
+print(MONTH)
+
 for account in accounts:
     pdf_dir = f'{WORK_PATH}/output1/{account["account"]}'
     result_dir = f'{WORK_PATH}/output2'
